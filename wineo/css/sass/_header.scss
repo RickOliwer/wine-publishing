@@ -1,0 +1,16 @@
+.main_header{
+    background-image: url("../../images/header/Rectangle\ 1@2x.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+        .overlay{
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            top: 0;
+            left: 0;
+            background: rgba($color: $black, $alpha: 0.5);
+        }
+}
+
