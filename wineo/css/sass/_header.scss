@@ -1,5 +1,5 @@
 .main_header{
-    background-image: url("../../images/header/Rectangle\ 1@2x.png");
+    //background-image: url("../../images/header/Rectangle\ 1@2x.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -13,4 +13,56 @@
             background: rgba($color: $black, $alpha: 0.5);
         }
 }
+
+
+.burger div{
+    background: #3f3f3f;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+.hero{
+    height: 72vh;
+}
+
+.burger__animation .item1{
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.burger__animation .item2{
+    opacity: 0;
+}
+
+.burger__animation .item3{
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+@media screen and (max-width: 768px) {
+
+    body{
+        
+    }
+    .link__container{
+        position: absolute;
+        right: 0px;
+        height: 92vh;
+        top: 8vh;
+        background-color: #f2f2f2;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center;
+        justify-content: space-around !important;
+        width: 70%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+        z-index: 1;
+
+    }
+    
+    .link__container_active{
+        transform: translateX(0%);
+    
+    }
+}
+
 
