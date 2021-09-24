@@ -8,7 +8,9 @@ export default function Home({ data }) {
   
   return (
     <Layout key="layout" data={data} >
-      content
+      <div className="">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima, totam recusandae. Itaque non quam quis veritatis fuga assumenda modi! Culpa iste ipsa doloribus corrupti dolor temporibus velit rem, ut ducimus?
+      </div>
     </Layout>
   )
 }
