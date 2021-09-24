@@ -7,7 +7,7 @@ const Layout = ({children, data}) => {
     return ( 
         <div>
             <head>
-                <link rel="shortcut icon" href={ data?.header?.favicon} />
+                <link rel="shortcut icon" href={ data?.header?.favicon } />
             </head>
             <Header header={data?.header} headerMenus={data?.menus?.headerMenus} />
             {children}

@@ -17,11 +17,11 @@ export default function Home({ data }) {
 
 
 export async function getStaticProps(){
-  const data = await Client.query({
+  const {data, loading, networkStatus} = await Client.query({
     query: GET_MENUS
   })
 
-  console.log( 'data', data );
+  console.warn( 'data', data );
 
   return {
     props: {
