@@ -1,15 +1,26 @@
 import Head from 'next/head'
 import Client from '../src/apollo/client'
+import Intro from '../src/components/content/intro';
+import Readers from '../src/components/content/readers';
+import Table from '../src/components/content/table';
 import Layout from '../src/components/layout';
 import { GET_MENUS } from '../src/queries/get-menus'
+import { GET_PAGE } from '../src/queries/get-page';
 
-
-export default function Home({ data }) {
-  
+export default function Home({ data, content }) {
+  console.log('my page', content?.pages);
   return (
     <Layout key="layout" data={data} >
-      <div className="">
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima, totam recusandae. Itaque non quam quis veritatis fuga assumenda modi! Culpa iste ipsa doloribus corrupti dolor temporibus velit rem, ut ducimus?
+      <div id="wine-publishing">
+          <Intro  IntroContent={content?.pages?.intoduktion} />
+      </div>
+
+      <div id="readers">
+          <Readers ReadersContent={content?.pages?.readers} />
+      </div>
+
+      <div>
+        <Table />
       </div>
     </Layout>
   )
@@ -21,7 +32,16 @@ export default function Home({ data }) {
 export async function getStaticProps(){
   const {data, loading, networkStatus} = await Client.query({
     query: GET_MENUS
+    
   })
+
+  const response = await Client.query({
+    query: GET_PAGE
+  })
+
+  console.log('My response', response);
+  
+  
 
   console.warn( 'data', data );
 
@@ -35,7 +55,12 @@ export async function getStaticProps(){
           footerMenus: data?.footerMenus?.edges  || [],
         },
         footer: data?.footer  || [],
-      }
+
+      },
+
+      content: {
+        pages: response?.data?.pageBy || [],
+      },
       
     },
   }

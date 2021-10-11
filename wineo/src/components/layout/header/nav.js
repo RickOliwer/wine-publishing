@@ -23,8 +23,8 @@ const Nav = ({header, headerMenus}) => {
     })
 
     return ( 
-        <nav className="fixed w-full">
-            <div className={`${ isMenuScroll ? 'bg-brand-bgwhite text-brand-dark h-20 items-center p-4' : 'p-8 h-52 lg:items-start text-brand-light'} w-full transition duration-1000 ease-in-out flex justify-between relative inset-x-0 `}>
+        <nav className="fixed z-40 w-full">
+            <div className={`${ isMenuScroll ? 'bg-white text-brand-dark h-20 items-center p-4' : 'p-8 h-52 lg:items-start text-brand-light'} w-full transition duration-1000 ease-in-out flex justify-between relative inset-x-0 `}>
 
                 <div className={`${ isMenuScroll ? '' : ''} mr-4 h-full transition duration-1000 ease-in-out`}>
                     {/* Site Logo */}
@@ -32,16 +32,16 @@ const Nav = ({header, headerMenus}) => {
                 </div>
 
 
-                <div onClick={() => setIsOpen(!isOpen)} className={`px-4 cursor-pointer burger lg:hidden md:block ${isOpen ? 'burger__animation' : '' }`}>
+                <div onClick={() => setIsOpen(!isOpen)} className={`px-4 cursor-pointer burger lg:hidden md:block ${isOpen ? 'burger__animation' : '' } ${ isMenuScroll ? 'dark' : 'light'}`}>
                         <div className="h-1 m-1 w-7 item1"></div>
                         <div className="h-1 m-1 w-7 item2"></div>
                         <div className="h-1 m-1 w-7 item3"></div>
                 </div>
 
                 {headerMenus?.length ? (
-                <div className={`${isOpen ? 'link__container_active' : 'link__container' } pr-8`}>
+                <div className={`${isOpen ? 'link__container link__container_active' : 'link__container pr-8' }`}>
                     {headerMenus?.map( menu => (
-                        <a key={menu?.node?.id} href={menu?.node?.url} className="hover:text-brand-oranges">
+                        <a key={menu?.node?.id} href={menu?.node?.url} className={`${isOpen ? '' : 'pl-8' } hover:text-brand-oranges`}>
                             {menu?.node?.label}
                         </a>
                     ))}
