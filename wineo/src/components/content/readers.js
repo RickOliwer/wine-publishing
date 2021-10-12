@@ -4,8 +4,6 @@ import Link from 'next/link';
 
 const Readers = ({ ReadersContent }) => {
     const hasImg = ReadersContent?.readersBild && ReadersContent?.readersBild?.mediaItemUrl ? true : false
-
-    console.log('ReadersContent', ReadersContent);
     return (
         <div className="bg-brand-bggray p-7 md:p-10 lg:p-24">
 

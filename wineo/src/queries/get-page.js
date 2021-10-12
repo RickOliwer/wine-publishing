@@ -4,6 +4,19 @@ export const GET_PAGE = gql`
 query MyQuery {
     pageBy(uri: "/") {
         isFrontPage
+        materialSpecification {
+            materialDatum
+            materialEmail
+            materialExcerpt
+            materialLabel
+            materialTable {
+                product
+                size
+                format
+                weight
+            }
+            materialTerms
+        }
         readers {
             hemsidor {
               titel

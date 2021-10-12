@@ -8,7 +8,6 @@ import { GET_MENUS } from '../src/queries/get-menus'
 import { GET_PAGE } from '../src/queries/get-page';
 
 export default function Home({ data, content }) {
-  console.log('my page', content?.pages);
   return (
     <Layout key="layout" data={data} >
       <div id="wine-publishing">
@@ -20,7 +19,7 @@ export default function Home({ data, content }) {
       </div>
 
       <div>
-        <Table />
+        <Table MaterialContent={content?.pages?.materialSpecification}/>
       </div>
     </Layout>
   )
