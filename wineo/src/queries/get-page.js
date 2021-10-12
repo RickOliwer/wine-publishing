@@ -4,6 +4,27 @@ export const GET_PAGE = gql`
 query MyQuery {
     pageBy(uri: "/") {
         isFrontPage
+        contact {
+            contactTitel
+            contactAdress {
+              foretag
+              co
+              adress
+              postnummer
+              stad
+              land
+            }
+            contactBild {
+              mediaItemUrl
+            }
+            contactSamples {
+              titel
+              info
+            }
+            contactInfo {
+              info
+            }
+        }
         advantages {
             advantagesTitel
             advantagesUtdrag
