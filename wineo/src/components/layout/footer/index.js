@@ -5,45 +5,29 @@ const Footer = ({ footer, footerMenus }) => {
 
     return (
         <footer className="p-6 text-white bg-brand-dark">
-            <div className="flex flex-wrap -mx-1 overflow-hidden">
+            <div className="grid w-full grid-cols-1 text-center md:gap-9 md:grid-cols-3 md:text-left">
 
-                <div className="w-full px-1 my-1 overflow-hidden sm:w-full lg:w-1/2 xl:w-1/3">
-                    <div dangerouslySetInnerHTML={{ __html: sanitize(footer?.sidebarOne)}} />
+                <div>
+                    Hello world
                 </div>
 
-                <div className="w-full px-1 my-1 overflow-hidden sm:w-full lg:w-1/2 xl:w-1/3">
-                    <div dangerouslySetInnerHTML={{ __html: sanitize(footer?.sidebarTwo)}} />
+                <div className="wtf">
+                    <div className="side_one" dangerouslySetInnerHTML={{ __html: footer?.sidebarOne}} />
                 </div>
 
-                <div className="w-full px-1 my-1 overflow-hidden sm:w-full lg:w-1/2 xl:w-1/3">
-                    { ! isEmpty( footerMenus ) && isArray( footerMenus ) ? (
-                        <ul>
-                            {footerMenus.map( footerMenu => (
-                                <li key={footerMenu?.node?.id}>
-                                    <Link href={footerMenu?.node?.path}>
-                                        <a>
-                                            {footerMenu?.node?.label}
-                                        </a>
-                                    </Link>
-                                </li>
-                            ))}
-                        </ul>
-                    ) : null}
-                    
-
+                <div>
+                    <div className="side_two" dangerouslySetInnerHTML={{ __html: sanitize(footer?.sidebarTwo)}} />
                 </div>
-
             </div>
-            <div className="flex flex-wrap mt-8 mb-8 -mx-1 overflow-hidden">
+            <div className="grid grid-cols-2">
 
-                <div className="w-full px-1 my-1 overflow-hidden xl:w-1/2">
+                <div class="text-left">
                     {footer.copyrightText ? footer.copyrightText : ''}
                 </div>
 
-                <div className="flex justify-end w-full px-1 my-1 overflow-hidden xl:w-1/2">
-
+                <div className="text-right">
+                Built with ♥ by Capace Media
                 </div>
-
             </div>
         </footer>
     )

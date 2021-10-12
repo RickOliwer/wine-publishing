@@ -1,0 +1,52 @@
+.side_one{
+    
+    h2, p{
+        color: white;
+    }
+
+    .widget_text{
+
+        padding-bottom: 20px;
+
+            h2{
+                font-size: 50px;
+                font-family: $cabin;
+                text-decoration: underline;
+                text-decoration-color: #f16c20;
+                -webkit-text-decoration-color: #f16c20;
+                text-underline-offset: 16px;
+                line-height: 2.5em;
+            }
+
+            p{
+                font-size: 20px;
+                font-family: $open;
+            }
+    }
+}
+
+.side_two{
+    
+    h2, p{
+        color: white;
+    }
+
+    .widget_text{
+        padding-bottom: 20px;
+            h2{
+                font-size: 50px;
+                font-family: $cabin;
+                text-decoration: underline;
+                text-decoration-color: #f16c20;
+                -webkit-text-decoration-color: #f16c20;
+                text-underline-offset: 16px;
+                line-height: 2.5em;
+            }
+
+            p{
+                font-size: 20px;
+                font-family: $open;
+                color: #f16c20;
+            }
+    }
+}
