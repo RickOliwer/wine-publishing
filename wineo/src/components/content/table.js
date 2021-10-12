@@ -11,8 +11,8 @@ const Table = ({ MaterialContent }) => {
         <table className="w-full m-auto table-fixed the_table">
             <thead>
                 <tr className="text-left table_lables">
-                    <th className="w-1/2 py-5 pl-4 uppercase text-brand-oranges">Product</th>
-                    <th className="w-1/4 py-5 pl-4 uppercase text-brand-oranges">Size</th>
+                    <th className="w-1/3 py-5 pl-4 uppercase text-brand-oranges">Product</th>
+                    <th className="w-1/3 py-5 pl-4 uppercase text-brand-oranges">Size</th>
                     <th className="w-1/12 py-5 pl-4 uppercase text-brand-oranges">Format</th>
                     <th className="w-1/12 py-5 pl-4 uppercase text-brand-oranges">Weight</th>
                 </tr>
