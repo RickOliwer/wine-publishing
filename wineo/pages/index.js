@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Client from '../src/apollo/client'
+import Advantages from '../src/components/content/advantages';
 import Intro from '../src/components/content/intro';
 import Readers from '../src/components/content/readers';
 import Table from '../src/components/content/table';
@@ -18,8 +19,12 @@ export default function Home({ data, content }) {
           <Readers ReadersContent={content?.pages?.readers} />
       </div>
 
-      <div>
-        <Table MaterialContent={content?.pages?.materialSpecification}/>
+      <div id="material-spec">
+        <Table MaterialContent={content?.pages?.materialSpecification} />
+      </div>
+      <div id="advantages">
+          <Advantages AdvantagesContent={content?.pages?.advantages} />
+
       </div>
     </Layout>
   )

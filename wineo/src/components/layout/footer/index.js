@@ -4,7 +4,7 @@ import Link from 'next/link'
 const Footer = ({ footer, footerMenus }) => {
 
     return (
-        <footer className="p-6 text-white bg-black">
+        <footer className="p-6 text-white bg-brand-dark">
             <div className="flex flex-wrap -mx-1 overflow-hidden">
 
                 <div className="w-full px-1 my-1 overflow-hidden sm:w-full lg:w-1/2 xl:w-1/3">

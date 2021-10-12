@@ -28,7 +28,10 @@ const Nav = ({header, headerMenus}) => {
 
                 <div className={`${ isMenuScroll ? '' : ''} mr-4 h-full transition duration-1000 ease-in-out`}>
                     {/* Site Logo */}
-                    <img src={header?.siteLogoUrl} alt="" className="h-full"/>
+                    <a href="#top">
+                        <img src={header?.siteLogoUrl} alt="" className="h-full"/>
+
+                    </a>
                 </div>
 
 

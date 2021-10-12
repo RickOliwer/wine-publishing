@@ -4,6 +4,13 @@ export const GET_PAGE = gql`
 query MyQuery {
     pageBy(uri: "/") {
         isFrontPage
+        advantages {
+            advantagesTitel
+            advantagesUtdrag
+            advantagesLista {
+              listpunkt
+            }
+        }
         materialSpecification {
             materialDatum
             materialEmail

@@ -5,7 +5,7 @@ import Link from 'next/link';
 const Readers = ({ ReadersContent }) => {
     const hasImg = ReadersContent?.readersBild && ReadersContent?.readersBild?.mediaItemUrl ? true : false
     return (
-        <div className="bg-brand-bggray p-7 md:p-10 lg:p-24">
+        <div className="bg-brand-bggray p-7 md:p-10 lg:p-20">
 
             <div className="h_underline">
                 <h2 className="text-3xl text-center">{ReadersContent?.readersTitel}</h2>

@@ -10,13 +10,14 @@ $open: 'Open Sans', sans-serif;
 
 @import 'sass/header';
 @import 'sass/table';
+@import 'sass/advantages';
 
 h1, h2, h3, h4, h5, h5, a{
     font-family: $cabin;
     color: $black;
 }
 
-p, span, th, td {
+p, span, th, td, li {
     font-family: $open;
     color: $black;
 }
