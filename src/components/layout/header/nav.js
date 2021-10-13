@@ -26,7 +26,7 @@ const Nav = ({header, headerMenus}) => {
 
     return ( 
         <nav className="fixed z-40 w-full">
-            <div className={`${ isMenuScroll ? 'bg-white text-brand-dark h-20 items-center p-4' : 'p-8 h-52 lg:items-start text-brand-light'} w-full transition duration-1000 ease-in-out flex justify-between relative inset-x-0 `}>
+            <div className={`${ isMenuScroll ? 'bg-white text-brand-dark h-20 items-center p-4 border-b' : 'p-8 h-52 lg:items-start text-brand-light'} w-full transition duration-1000 ease-in-out flex justify-between relative inset-x-0 `}>
 
                 <div className={`${ isMenuScroll ? '' : ''} mr-4 h-full transition duration-1000 ease-in-out`}>
                     {/* Site Logo */}
