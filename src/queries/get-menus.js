@@ -26,6 +26,11 @@ footerMenus: menuItems(where: {location: HCMS_MENU_FOOTER, parentId: "0"}) {
   edges {
     node {
       ...MenuFragment
+      footer {
+        file {
+          mediaItemUrl
+        }
+      }
     }
   }
 }
@@ -37,7 +42,8 @@ footer: getFooter {
     iconName
     iconUrl
   }
-}`
+}
+`
 
 export const GET_MENUS = gql`
 query MyQuery {

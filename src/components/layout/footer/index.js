@@ -4,34 +4,49 @@ import Link from 'next/link'
 import Image from "next/image"
 import footerLogo from "../../../../public/images/footer/footer-logo.png"
 const Footer = ({ footer, footerMenus }) => {
+    console.log('footer', footerMenus);
 
     return (
         <footer className="p-6 text-white bg-brand-dark" id="download">
-            <div>
-                <div className="grid w-full grid-cols-1 text-center border-b border-white md:gap-32 md:grid-cols-3 md:text-left">
+            <div className="footer_container">
+                <div className="grid w-full grid-cols-1 text-center border-b border-white md:gap-32 md:grid-cols-7 md:text-left">
 
-                    <div>
-                        <div className="relative w-4/6 m-auto mt-5 h-4/6">
-                            <Image layout="responsive" objectFit="cover" src={footerLogo} priority/>
-                            <p className="text-sm text-center text-white my-9">Guiding the way to enjoyment of life since 2009</p>
-                        </div>
-                    </div>
 
-                    <div className="wtf">
+                    <div className="md:col-span-3 logo">
                         <div className="side_one" dangerouslySetInnerHTML={{ __html: sanitize(footer?.sidebarOne)}} />
                     </div>
 
-                    <div>
+                    <div className="md:col-span-2 contact">
                         <div className="side_two" dangerouslySetInnerHTML={{ __html: sanitize(footer?.sidebarTwo)}} />
                     </div>
+                    <div className="md:col-span-2">
+                        <div className="h_underline">
+                            <h2 className="text-3xl font-normal text-brand-light">
+                                Download
+                            </h2>
+                        </div>
+                        { ! isEmpty( footerMenus ) && isArray( footerMenus ) ? (
+                            <ul>
+                                {footerMenus.map( footerMenu => (
+                                    <li key={footerMenu?.node?.id} className="pb-4 hover:text-white text-brand-oranges">
+                                        
+                                            <a href={footerMenu?.node?.footer?.file?.mediaItemUrl} download>
+                                                {footerMenu?.node?.label}
+                                            </a>
+                                        
+                                    </li>
+                                ))}
+                            </ul>
+                        ) : null}
+                    </div>
                 </div>
-                <div className="grid w-full grid-cols-2 py-4">
+                <div className="grid w-full grid-cols-1 py-4 md:grid-cols-2">
 
-                    <div class="text-left">
+                    <div class="md:text-left text-center">
                         {footer.copyrightText ? footer.copyrightText : ''}
                     </div>
 
-                    <div className="text-right">
+                    <div className="text-center md:text-right">
                         Built with ♥ by Capace Media
                     </div>
                 </div>

@@ -1,53 +1,69 @@
-.side_one{
+.logo{
+    .side_one{
     
-    h2, p{
-        color: white;
-    }
-
-    .widget_text{
-
-        padding-bottom: 20px;
-
-            h2{
-                font-size: 1.875rem;
-                font-family: $cabin;
-                text-decoration: underline;
-                text-decoration-color: #f16c20;
-                -webkit-text-decoration-color: #f16c20;
-                text-underline-offset: 16px;
-                line-height: 2.5em;
-            }
-
-            p{
-                font-family: $open;
-                font-size: 1rem;
-            }
+        h2, p{
+            color: white;
+        }
+    
+        .widget_media_image{
+            padding-bottom: 1em;
+                .widget-content{
+    
+                        img{
+                            margin: auto;
+                        }
+                }
+        }
+    
+        .widget_text{
+    
+            padding-bottom: 20px;
+            margin: auto;
+    
+                h2{
+                    font-size: 1.875rem;
+                    font-family: $cabin;
+                    text-decoration: underline;
+                    text-decoration-color: #f16c20;
+                    -webkit-text-decoration-color: #f16c20;
+                    text-underline-offset: 16px;
+                    line-height: 2.5em;
+                }
+    
+                p{
+                    font-family: $open;
+                    font-size: 1rem;
+                    text-align: center;
+                }
+        }
     }
 }
 
-.side_two{
+.contact{
+
+    .side_two{
+        
+        h2, p{
+            color: white;
+        }
     
-    h2, p{
-        color: white;
-    }
-
-    .widget_text{
-        padding-bottom: 20px;
-            h2{
-                font-size: 1.875rem;
-                font-family: $cabin;
-                text-decoration: underline;
-                text-decoration-color: #f16c20;
-                -webkit-text-decoration-color: #f16c20;
-                text-underline-offset: 16px;
-                line-height: 2.5em;
-                
-            }
-
-            p{
-                font-size: 1rem;
-                font-family: $open;
-                color: #f16c20;
-            }
+        .widget_text{
+            padding-bottom: 20px;
+                h2{
+                    font-size: 1.875rem;
+                    font-family: $cabin;
+                    text-decoration: underline;
+                    text-decoration-color: #f16c20;
+                    -webkit-text-decoration-color: #f16c20;
+                    text-underline-offset: 16px;
+                    line-height: 2.5em;
+                    
+                }
+    
+                p{
+                    font-size: 1rem;
+                    font-family: $open;
+                }
+        }
     }
 }
