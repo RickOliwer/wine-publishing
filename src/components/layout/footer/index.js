@@ -9,6 +9,8 @@ const Footer = ({ footer, footerMenus }) => {
     const myfind = mysplit.find(element => element.includes('src'));
     const src = myfind.split('"')
 
+    console.log('download', footerMenus);
+
 
     return (
         <footer className="p-6 text-white px-9 bg-brand-dark" id="download">
@@ -37,9 +39,9 @@ const Footer = ({ footer, footerMenus }) => {
                                 {footerMenus.map( footerMenu => (
                                     <li key={footerMenu?.node?.id} className="pb-4 hover:text-white text-brand-oranges">
                                         
-                                            <a href={footerMenu?.node?.footer?.file?.mediaItemUrl} download>
+                                            <Link href={footerMenu?.node?.footer?.file?.mediaItemUrl} download>
                                                 {footerMenu?.node?.label}
-                                            </a>
+                                            </Link>
                                         
                                     </li>
                                 ))}
