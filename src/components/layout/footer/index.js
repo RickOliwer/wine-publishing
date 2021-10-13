@@ -3,8 +3,13 @@ import {sanitize} from '../../../utils/miscellaneous';
 import Link from 'next/link'
 import Image from "next/image"
 import footerLogo from "../../../../public/images/footer/footer-logo.png"
+import { element } from 'prop-types';
 const Footer = ({ footer, footerMenus }) => {
-    console.log('footer', footerMenus);
+    const findImg = footer?.sidebarOne
+    const mysplit = findImg.split(' ')
+    const myfind = mysplit.find(element => element.includes('src'));
+    const src = myfind.split('"')
+
 
     return (
         <footer className="p-6 text-white bg-brand-dark" id="download">
@@ -13,6 +18,9 @@ const Footer = ({ footer, footerMenus }) => {
 
 
                     <div className="md:col-span-3 logo">
+                        <div className="show-logo">
+                            <Image src={src[1]} className="m-auto" width="359" height="359" />
+                        </div>
                         <div className="side_one" dangerouslySetInnerHTML={{ __html: sanitize(footer?.sidebarOne)}} />
                     </div>
 
