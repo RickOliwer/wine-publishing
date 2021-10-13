@@ -4,7 +4,6 @@ import Link from 'next/link';
 
 const Intro = ({ IntroContent }) => {
     const hasImg = IntroContent?.introBild && IntroContent?.introBild?.mediaItemUrl ? true : false
-    console.log('IntroContent', IntroContent);
     return (
         <div className="grid grid-cols-1 lg:grid lg:grid-cols-2 lg:gap-14">
             <div className="lg:p-24 md:p-10 p-7 h_underline">

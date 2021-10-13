@@ -7,7 +7,7 @@ const Advantages = ({ AdvantagesContent }) => {
             </div>
             <ul className="grid gap-5 lg:grid-cols-2">
                 {AdvantagesContent?.advantagesLista.map( item => (
-                    <li className="px-10 text-center lg:text-left lg:px-20">{item?.listpunkt}</li>
+                    <li key={item?.listpunkt} className="px-10 text-center lg:text-left lg:px-20">{item?.listpunkt}</li>
                 ))}
             </ul>
         </div>

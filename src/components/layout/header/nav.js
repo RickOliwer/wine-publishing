@@ -2,6 +2,7 @@ import  {isEmpty} from 'lodash'
 import 'tailwindcss/tailwind.css'
 import { useState, useEffect } from 'react'
 import {Link} from 'react-scroll'
+import Image from "next/image"
 const Nav = ({header, headerMenus}) => {
 
     if( isEmpty(headerMenus) ){

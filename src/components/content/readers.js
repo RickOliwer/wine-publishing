@@ -20,7 +20,7 @@ const Readers = ({ ReadersContent }) => {
                 <p className="pt-2 text-sm text-center">The Sites are:</p>
                 <p className="pb-16 text-sm text-center">
                     {ReadersContent?.hemsidor.map( (site, index) => (
-                        <a className="hover:text-brand-oranges"
+                        <a key={site?.url} className="hover:text-brand-oranges"
                         href={site?.url} 
                         key={site?.url}
                         >{site?.titel}{index === 0 ? ', ' : ' '}</a>

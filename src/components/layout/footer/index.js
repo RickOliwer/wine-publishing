@@ -49,7 +49,7 @@ const Footer = ({ footer, footerMenus }) => {
                 </div>
                 <div className="grid w-full grid-cols-1 py-4 md:grid-cols-2">
 
-                    <div class="md:text-left text-center">
+                    <div className="text-center md:text-left">
                         {footer.copyrightText ? footer.copyrightText : ''}
                     </div>
 

@@ -1,7 +1,6 @@
 import Image from 'next/image'
 const Contact = ({ ContactContent }) => {
     const hasImg = ContactContent?.contactBild && ContactContent?.contactBild?.mediaItemUrl ? true : false
-    console.log('ContactContent', ContactContent);
     return (
         <div className="grid grid-cols-1 lg:grid lg:grid-cols-2 lg:gap-14">
 
@@ -20,14 +19,14 @@ const Contact = ({ ContactContent }) => {
 
                 <div className="pb-7">
                     {ContactContent?.contactSamples.map( sample => (
-                        <p className="text-base text-center text-brand-dark">{sample?.titel} {sample?.info}</p>
+                        <p key={sample?.titel} className="text-base text-center text-brand-dark">{sample?.titel} {sample?.info}</p>
                     ))}
                 </div>
 
 
                 <div>
                     {ContactContent?.contactInfo.map( info => (
-                        <p className="text-base text-center text-brand-dark">{info?.info}</p>
+                        <p key={info?.info} className="text-base text-center text-brand-dark">{info?.info}</p>
                     ))}
                 </div>
 

@@ -1,8 +1,7 @@
 
 const Table = ({ MaterialContent }) => {
-    console.log('material', MaterialContent);
     return (
-    <div class="w-5/6 lg:w-3/4 m-auto"> 
+    <div className="w-5/6 m-auto lg:w-3/4"> 
 
         <div className="h_underline">
             <h2 className="pt-16 text-3xl text-center">{MaterialContent?.materialLabel}</h2>
@@ -20,7 +19,7 @@ const Table = ({ MaterialContent }) => {
             <tbody>
 
                 {MaterialContent?.materialTable.map( table => (
-                    <tr>
+                    <tr key={table?.product}>
                         <td className="py-5 pl-4 " data-label="Product">{table?.product || '-'}</td>
                         <td className="py-5 pl-4 " data-label="Size">{table?.size || '-'}</td>
                         <td className="py-5 pl-4 " data-label="Format">{table?.format || '-'}</td>
