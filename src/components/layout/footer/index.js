@@ -9,7 +9,6 @@ const Footer = ({ footer, footerMenus }) => {
     const myfind = mysplit.find(element => element.includes('src'));
     const src = myfind.split('"')
 
-    console.log('download', footerMenus);
 
 
     return (

@@ -11,7 +11,7 @@ import { GET_PAGE } from '../src/queries/get-page';
 
 export default function Home({ data, content }) {
   return (
-    <Layout key="layout" data={data} >
+    <Layout key="layout" data={data}>
       <div id="wine-publishing">
           <Intro  IntroContent={content?.pages?.intoduktion} />
       </div>
@@ -45,12 +45,6 @@ export async function getStaticProps(){
   const response = await Client.query({
     query: GET_PAGE
   })
-
-  console.log('My response', response);
-  
-  
-
-  console.warn( 'data', data );
 
   return {
     props: {
