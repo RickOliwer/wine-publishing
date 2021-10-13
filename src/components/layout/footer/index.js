@@ -11,13 +11,13 @@ const Footer = ({ footer, footerMenus }) => {
 
 
     return (
-        <footer className="p-6 text-white bg-brand-dark" id="download">
+        <footer className="p-6 text-white px-9 bg-brand-dark" id="download">
             <div className="footer_container">
-                <div className="grid w-full grid-cols-1 text-center border-b border-white md:gap-32 md:grid-cols-7 md:text-left">
+                <div className="grid w-full grid-cols-1 text-center border-b border-white py-11 md:gap-32 md:grid-cols-7 md:text-left">
 
 
                     <div className="md:col-span-3 logo">
-                        <div className="show-logo">
+                        <div className="pb-6 show-logo">
                             <Image src={src[1]} className="m-auto" width="359" height="359" />
                         </div>
                         <div className="side_one" dangerouslySetInnerHTML={{ __html: sanitize(footer?.sidebarOne)}} />

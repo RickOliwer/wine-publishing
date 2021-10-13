@@ -15,7 +15,7 @@ const Header = ({header, headerMenus}) => {
                 {/* Site title & taglines */}
                 <div className="flex items-center justify-center w-full h-full text-center">
                     <div className="flex flex-col justify-start p-10 text-center lg:items-center">
-                        <h1 className="pb-4 text-3xl font-semibold bg_dark_text lg:text-8xl">{header?.siteTitle}</h1>
+                        <h1 className="text-3xl font-semibold pb-7 bg_dark_text lg:text-8xl">{header?.siteTitle}</h1>
                         <p className="font-semibold bg_dark_text lg:text-2xl">{header?.siteTagLine}</p>
                     </div>
 
