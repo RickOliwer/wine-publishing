@@ -6,7 +6,7 @@ import footerLogo from "../../../../public/images/footer/footer-logo.png"
 const Footer = ({ footer, footerMenus }) => {
 
     return (
-        <footer className="p-6 text-white bg-brand-dark">
+        <footer className="p-6 text-white bg-brand-dark" id="download">
             <div>
                 <div className="grid w-full grid-cols-1 text-center border-b border-white md:gap-32 md:grid-cols-3 md:text-left">
 

@@ -8,8 +8,8 @@ const Header = ({header, headerMenus}) => {
         return null;
     }
     return ( 
-        <header id="top" className="h-screen bg-black main_header">
-            <Image layout="fill" objectFit="cover" src={hero} priority/>
+        <header id="front" className="h-screen bg-black main_header">
+            <Image  layout="fill" objectFit="cover" src={hero} priority/>
             <div className="overlay">
                 <Nav header={header} headerMenus={headerMenus} />
                 {/* Site title & taglines */}

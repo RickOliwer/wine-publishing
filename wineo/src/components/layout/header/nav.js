@@ -1,6 +1,7 @@
 import  {isEmpty} from 'lodash'
 import 'tailwindcss/tailwind.css'
 import { useState, useEffect } from 'react'
+import {Link} from 'react-scroll'
 const Nav = ({header, headerMenus}) => {
 
     if( isEmpty(headerMenus) ){
@@ -28,10 +29,10 @@ const Nav = ({header, headerMenus}) => {
 
                 <div className={`${ isMenuScroll ? '' : ''} mr-4 h-full transition duration-1000 ease-in-out`}>
                     {/* Site Logo */}
-                    <a href="#top">
-                        <img src={header?.siteLogoUrl} alt="" className="h-full"/>
+                    <Link to="front" smooth={true} duration={1000}>
+                        <img src={header?.siteLogoUrl} alt="" className="h-full cursor-pointer"/>
 
-                    </a>
+                    </Link>
                 </div>
 
 
@@ -44,9 +45,9 @@ const Nav = ({header, headerMenus}) => {
                 {headerMenus?.length ? (
                 <div className={`${isOpen ? 'link__container link__container_active' : 'link__container pr-8' }`}>
                     {headerMenus?.map( menu => (
-                        <a key={menu?.node?.id} href={menu?.node?.url} className={`${isOpen ? '' : 'pl-8' } hover:text-brand-oranges`}>
+                        <Link key={menu?.node?.id} to={`${menu?.node?.url.replace('http://', '')}`} className={`${isOpen ? '' : 'pl-8' } cursor-pointer hover:text-brand-oranges`} smooth={true} duration={1000}>
                             {menu?.node?.label}
-                        </a>
+                        </Link>
                     ))}
                 </div>
                 ) : null}
