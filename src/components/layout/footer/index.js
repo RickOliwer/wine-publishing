@@ -2,7 +2,6 @@ import {isEmpty, isArray} from 'lodash';
 import {sanitize} from '../../../utils/miscellaneous';
 import Link from 'next/link'
 import Image from "next/image"
-import footerLogo from "../../../../public/images/footer/footer-logo.png"
 import { element } from 'prop-types';
 const Footer = ({ footer, footerMenus }) => {
     const findImg = footer?.sidebarOne
